@@ -13,24 +13,24 @@
     "sources": "https://example.com/"
   },
   "license": "The Unlicense",
-  "icon": "assets/mod_name/icon.png",
+  "icon": "assets/wynndating/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.mod_author.mod_id.ModName"
+        "value": "fr.kumakuma215.wynndating.WynnDating"
       }
     ]
   },
   "mixins": [
-    "mod_id.mixins.json"
+    "wynndating.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.13.3",
     "fabric": "*",
     "fabric-language-kotlin": ">=1.7.4+kotlin.1.6.21",
-    "minecraft": "1.18.x",
+    "minecraft": "1.16.x",
     "java": ">=17"
   }
 }
