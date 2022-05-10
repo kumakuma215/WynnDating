@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "mod_id",
+  "id": "wynndating",
   "version": "${version}",
-  "name": "Mod Name",
-  "description": "Mod Description",
+  "name": "Wynn Dating",
+  "description": "The mod that allows you to date Wynn NPCs",
   "authors": [
-    "Author"
+    "kumakuma215"
   ],
   "contact": {
     "homepage": "https://example.com/",
@@ -20,6 +20,12 @@
       {
         "adapter": "kotlin",
         "value": "fr.kumakuma215.wynndating.WynnDating"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "fr.kumakuma215.wynndating.client.keybindings.KeyBindingsInitializer"
       }
     ]
   },
