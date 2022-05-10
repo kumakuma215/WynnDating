@@ -11,7 +11,7 @@ class Utils {
         fun getEntityName(entity: Entity) : String{
             val entities = entity.world.getOtherEntities(
                 entity,
-                Box(entity.x - 0.001, entity.eyeY, entity.z - 0.001, entity.x + 0.001, entity.eyeY + 2, entity.z + 0.001)
+                Box(entity.x - 0.5, entity.y, entity.z - 0.5, entity.x + 0.5, entity.y + 5, entity.z + 0.5)
             ) { e -> e is ArmorStandEntity && e.hasCustomName() && e.isCustomNameVisible }
 
             if (entities.size == 0) {
