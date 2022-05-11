@@ -23,6 +23,8 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api", "fabric-api", fabricVersion)
     val fabricKotlinVersion: String by project
     modImplementation("net.fabricmc", "fabric-language-kotlin", fabricKotlinVersion)
+
+    implementation("org.spongepowered:configurate-jackson:4.1.2")
 }
 tasks {
     val javaVersion = JavaVersion.VERSION_17

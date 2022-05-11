@@ -1,0 +1,54 @@
+{
+  "NPCTrigger": "Raid Keeper",
+  "AmityMinForMarriage": 500,
+  "MinimumLevel": 80,
+  "Dialogs": {
+    "0-1": {
+      "linkedOnly": true,
+      "text": [
+        "Have a good day!"
+      ]
+    },
+    "0-2": {
+      "linkedOnly": true,
+      "text": [
+        "Only for my baby",
+        "Here you go",
+        "*Smooch*"
+      ]
+    },
+    "0": {
+      "minimumAmity": 0,
+      "linkedOnly": false,
+      "text": [
+        "Hey! Hope you're doing great there.",
+        "Destroying those atrocities and everything."
+      ],
+      "choices": [
+        {
+          "text": "Doing fine! Thanks for the concern",
+          "links": "0-1",
+          "amityGain": 5
+        },
+        {
+          "text": "Kiss me on the lips. Right now!",
+          "links": "0-2",
+          "minimumAmity": 5,
+          "amityGain": 10
+        },
+        {
+          "text": "Here, 100 runes, give me §csex%r% now",
+          "links": "0-3",
+          "amityGain": 500,
+          "requires": {
+            "items": {
+              "rune": {
+                "quantity": 100
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

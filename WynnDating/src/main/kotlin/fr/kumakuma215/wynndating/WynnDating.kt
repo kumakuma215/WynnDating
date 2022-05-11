@@ -1,5 +1,6 @@
 package fr.kumakuma215.wynndating
 
+import fr.kumakuma215.wynndating.callbacks.PlayerSneakCallback
 import fr.kumakuma215.wynndating.config.ConfigManager
 import fr.kumakuma215.wynndating.listeners.UseEntityListener
 import net.fabricmc.api.ClientModInitializer
@@ -15,6 +16,7 @@ import net.minecraft.client.option.StickyKeyBinding
 import net.minecraft.client.util.InputUtil
 import net.minecraft.text.LiteralText
 import net.minecraft.text.Text
+import net.minecraft.util.ActionResult
 import org.lwjgl.glfw.GLFW
 
 
@@ -25,5 +27,9 @@ object WynnDating: ModInitializer {
     override fun onInitialize() {
         println("Wynndating mod has been initialized.")
         UseEntityCallback.EVENT.register(UseEntityListener())
+        PlayerSneakCallback.EVENT.register(PlayerSneakCallback{
+            println(it.isSneaky)
+            ActionResult.PASS
+        })
     }
 }

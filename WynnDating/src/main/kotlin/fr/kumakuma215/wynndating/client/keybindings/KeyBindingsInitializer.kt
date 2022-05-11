@@ -12,6 +12,9 @@ import org.lwjgl.glfw.GLFW
 
 object KeyBindingsInitializer : ClientModInitializer {
     override fun onInitializeClient() {
+
+
+
         val binding1: KeyBinding = KeyBindingHelper.registerKeyBinding(
             KeyBinding(
                 "key.wynn-dating-mod.toggle-mod",
@@ -31,5 +34,7 @@ object KeyBindingsInitializer : ClientModInitializer {
                 }
             }
         })
+
+
     }
 }
