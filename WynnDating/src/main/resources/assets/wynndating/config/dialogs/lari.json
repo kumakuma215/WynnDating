@@ -1,0 +1,111 @@
+{
+  "NPCName": "Lari",
+  "ColorRequired": "§2",
+  "dialogs": [
+    {
+      "id": "get_amity",
+      "linked": true,
+      "text": [
+        "Sure thing!",
+        "We currently have §e%amity% %r%!",
+        "Hope this helps"
+      ]
+    },
+    {
+      "id": "kiss_rune",
+      "linked": true,
+      "text": [
+        "You g-got 1 Az Rune!",
+        "I... I didn't expect you would try so hard",
+        "S-So, I'll let you k-k-kiss me...",
+        "Just this once!"
+      ],
+      "actions": [
+        {
+          "id": "KISS",
+          "text": [
+            "U-Uwah!",
+            "I-I didn't expect you to be so s-sudden!",
+            "b-but it felt g-good...",
+            "*blush*"
+          ],
+          "amityGiven": 5
+        }
+      ]
+    },
+    {
+      "id": "kiss_amity",
+      "linked": true,
+      "text": [
+        "You w-want to d-do it again?",
+        "I-I mean, it k-kind of felt g-good the first t-time...",
+        "S-So, I'll permit it..."
+      ],
+      "actions": [
+        {
+          "id": "KISS",
+          "text": [
+            "U-Uwah!",
+            "I-I didn't expect you to be so s-sudden!",
+            "b-but it felt g-good...",
+            "*blush*"
+          ],
+          "amityGiven": 5
+        }
+      ]
+    },
+    {
+      "id": "0",
+      "amityRequired": 0,
+      "text": [
+        "Hello %player%.",
+        "What brings you here?"
+      ],
+      "choices": [
+        {
+          "text": "I want to know our amity level",
+          "linksTo": "get_amity"
+        },
+        {
+          "text": "I want to kiss you",
+          "fail": [
+            "K-K-Kiss??!!!",
+            "N-No! We're not close enough!",
+            "B-But, I'm in dire need of 1 Az Rune",
+            "I-If that's what you want, I could let you k-kiss me for 1 Az Rune..."
+          ],
+          "required": [
+            {
+              "amity": 5,
+              "linksTo": "kiss_amity"
+            },
+            {
+              "item": "Az Rune",
+              "quantity": 1,
+              "linksTo": "kiss_rune"
+            }
+          ]
+        },
+        {
+          "text": "give sex now",
+          "linksTo": [
+            "W-W-What???",
+            "I... I guess we're close enough now",
+            "P-Please be gentle Achara...",
+            "*sex*"
+          ],
+          "fail": [
+            "W-W-What???",
+            "No, absolutely not!",
+            "We-We're nowhere cl-close enough to do t-this..."
+          ],
+          "required": [
+            {
+              "amity": 50
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

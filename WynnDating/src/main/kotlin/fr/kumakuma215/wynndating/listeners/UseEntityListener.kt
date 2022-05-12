@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity
 import net.minecraft.entity.decoration.ArmorStandEntity
 import net.minecraft.entity.passive.HorseBaseEntity
 import net.minecraft.entity.player.PlayerEntity
+import net.minecraft.nbt.NbtCompound
 import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
@@ -30,13 +31,11 @@ class UseEntityListener : UseEntityCallback {
         if(ConfigManager.isModEnabled) {
 
             if (entity != null && player?.isSneaky == true) {
-                if(entity is HorseBaseEntity){
-
-                }
                 val name = Utils.getEntityName(entity)
                 player.sendMessage(Text.of("§aName : $name"), false)
                 return ActionResult.CONSUME
             }
+
         }
         return ActionResult.PASS
     }

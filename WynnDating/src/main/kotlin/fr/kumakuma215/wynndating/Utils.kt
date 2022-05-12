@@ -1,7 +1,9 @@
 package fr.kumakuma215.wynndating
 
 import net.minecraft.entity.Entity
+import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.decoration.ArmorStandEntity
+import net.minecraft.nbt.NbtCompound
 import net.minecraft.util.math.Box
 
 object Utils {
@@ -42,7 +44,7 @@ object Utils {
     }
 
     fun getClosestEntity(entities: List<Entity>?, entity: Entity): Entity? {
-        if(entities ==  null){
+        if (entities == null) {
             return null
         }
         var minDist = Double.MAX_VALUE
